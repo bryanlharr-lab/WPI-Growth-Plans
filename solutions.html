@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WPI Growth Plans | More Ways to Grow</title>
+<meta name="description" content="WPI Growth Plans brings payment solutions, Customer Connect, Reputation Management, Revenue Recovery and Business Funding together in one platform.">
+<style>
+:root{
+  --green:#00864a;
+  --blue:#0879c9;
+  --ink:#07131f;
+  --muted:#9fb0bd;
+  --white:#f4f7f9;
+  --line:rgba(255,255,255,.15);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#061019;
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+}
+a{color:inherit;text-decoration:none}
+.page{max-width:1536px;margin:auto;overflow:hidden}
+.nav{
+  position:relative;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:25px 5vw;
+  border-bottom:1px solid var(--line);
+  background:rgba(6,16,25,.82);
+}
+.logo{
+  font-weight:900;
+  letter-spacing:-1px;
+  font-size:25px;
+}
+.logo span:first-child{color:var(--green)}
+.logo span:last-child{color:var(--blue)}
+.navlinks{display:flex;gap:34px;font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.navlinks a{opacity:.78}
+.navlinks a:hover,.navlinks .active{opacity:1;color:#fff}
+
+.hero{
+  min-height:72vh;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  align-items:end;
+  position:relative;
+  padding:9vh 7vw 8vh;
+  background:
+    radial-gradient(circle at 78% 35%,rgba(8,121,201,.26),transparent 30%),
+    radial-gradient(circle at 35% 70%,rgba(0,134,74,.22),transparent 34%),
+    linear-gradient(135deg,#07141f 0%,#0a1824 55%,#061019 100%);
+}
+.hero:after{
+  content:"";
+  position:absolute;inset:auto -10% 0 -10%;height:35%;
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.38));
+  pointer-events:none;
+}
+.eyebrow{font-size:13px;letter-spacing:.22em;font-weight:800;color:#72c9a0;margin-bottom:24px}
+h1{font-size:clamp(64px,9vw,150px);line-height:.86;letter-spacing:-.065em;margin:0;max-width:950px}
+h1 .green{color:var(--green)}
+h1 .blue{color:var(--blue)}
+.hero-copy{position:relative;z-index:2;max-width:610px;justify-self:end;padding-bottom:12px}
+.hero-copy p{font-size:23px;line-height:1.45;color:#d8e0e5;margin:0 0 28px}
+.stats{display:flex;gap:30px;flex-wrap:wrap}
+.stat strong{display:block;font-size:31px;line-height:1;color:#fff}
+.stat span{display:block;margin-top:7px;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+
+.intro{
+  padding:7vw;
+  border-bottom:1px solid var(--line);
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:8vw;
+}
+.intro h2{font-size:clamp(38px,5vw,76px);line-height:.95;letter-spacing:-.05em;margin:0}
+.intro p{font-size:23px;line-height:1.55;color:#c6d0d7;margin:0;max-width:760px}
+
+.product{
+  min-height:72vh;
+  display:grid;
+  grid-template-columns:110px 1fr .72fr;
+  gap:4vw;
+  align-items:center;
+  padding:8vw 7vw;
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+.product:nth-of-type(even){background:#08141d}
+.number{font-size:17px;font-weight:900;letter-spacing:.15em;color:var(--green);align-self:start;padding-top:12px}
+.product:nth-of-type(odd) .number{color:var(--blue)}
+.product h2{font-size:clamp(48px,6vw,96px);line-height:.9;letter-spacing:-.055em;margin:0 0 25px}
+.product p{font-size:21px;line-height:1.55;color:#bfcbd3;max-width:670px;margin:0}
+.product .accent{
+  align-self:stretch;
+  min-height:300px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.word{
+  font-size:clamp(55px,8vw,125px);
+  font-weight:900;
+  letter-spacing:-.08em;
+  line-height:.78;
+  text-align:center;
+  opacity:.12;
+  transform:rotate(-90deg);
+  white-space:nowrap;
+}
+.product:nth-of-type(odd) .word{color:var(--blue)}
+.product:nth-of-type(even) .word{color:var(--green)}
+
+.micro{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+.micro span{
+  border-bottom:1px solid rgba(255,255,255,.25);
+  padding-bottom:7px;
+  color:#eef4f7;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+.closer{
+  padding:10vw 7vw 12vw;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 0,rgba(0,134,74,.24),transparent 35%),
+    linear-gradient(180deg,#07121b,#040a10);
+}
+.closer .eyebrow{color:#69c6a0}
+.closer h2{font-size:clamp(52px,8vw,120px);line-height:.88;letter-spacing:-.06em;margin:0 auto 28px;max-width:1100px}
+.closer p{font-size:21px;line-height:1.5;color:#bdc8cf;max-width:720px;margin:0 auto 34px}
+.button{
+  display:inline-block;
+  padding:16px 25px;
+  border:1px solid rgba(255,255,255,.45);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.button:hover{border-color:#fff;background:#fff;color:#061019}
+
+.footer{
+  padding:28px 7vw;
+  border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;
+  color:#8f9da7;font-size:12px;letter-spacing:.08em;text-transform:uppercase
+}
+@media(max-width:900px){
+  .navlinks{gap:14px;font-size:11px}
+  .hero{grid-template-columns:1fr;min-height:auto;gap:70px}
+  .hero-copy{justify-self:start}
+  .intro{grid-template-columns:1fr}
+  .product{grid-template-columns:55px 1fr}
+  .product .accent{display:none}
+}
+@media(max-width:620px){
+  .nav{padding:20px}
+  .navlinks{display:none}
+  .hero,.intro,.product,.closer{padding-left:25px;padding-right:25px}
+  h1{font-size:68px}
+  .hero-copy p{font-size:19px}
+  .product{grid-template-columns:1fr;gap:15px}
+  .number{padding:0}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="nav">
+  <a class="logo" href="index.html"><span>WPI</span> <span>GROWTH PLANS</span></a>
+  <nav class="navlinks">
+    <a href="bryan.html">Bryan</a>
+    <a class="active" href="solutions.html">Products</a>
+    <a href="how-it-works.html">Resources</a>
+    <a href="contact.html">Connect</a>
+    <a href="contact.html">Let's Talk</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">WPI GROWTH PLANS • ONE PLATFORM</div>
+    <h1>MORE WAYS<br>TO <span class="green">GROW</span><span class="blue">.</span></h1>
+  </div>
+  <div class="hero-copy">
+    <p>Your business deserves more than a card terminal. WPI Growth Plans brings payment solutions and customer-growth tools together to help reduce expense, strengthen customer relationships, increase repeat business and create more opportunities to grow.</p>
+    <div class="stats">
+      <div class="stat"><strong>10,000+</strong><span>Merchants served</span></div>
+      <div class="stat"><strong>750M+</strong><span>Contact interactions</span></div>
+      <div class="stat"><strong>200M+</strong><span>Additional revenue</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <h2>THE TRANSACTION<br>ISN'T THE END.</h2>
+  <p>It's the beginning of the next customer relationship. WPI combines payment solutions with tools designed to capture customers, engage them, bring them back, strengthen your reputation and create new revenue opportunities.</p>
+</section>
+
+<section class="product">
+  <div class="number">01</div>
+  <div>
+    <h2>Customer<br>Connect</h2>
+    <p>Turn transactions into relationships. Build and organize your customer database, engage customers through automated text marketing, reconnect with customers who have not returned, encourage reviews and create additional sales opportunities through ongoing communication.</p>
+    <div class="micro"><span>Capture</span><span>Engage</span><span>Recover</span><span>Review</span><span>Revenue</span></div>
+  </div>
+  <div class="accent"><div class="word">CONNECT</div></div>
+</section>
+
+<section class="product">
+  <div class="number">02</div>
+  <div>
+    <h2>Reputation<br>Management</h2>
+    <p>Turn great customer experiences into great reviews. Customer Connect can capture feedback, help you stay on top of your reputation and make it easier to highlight positive experiences while addressing problems quickly.</p>
+    <div class="micro"><span>Feedback</span><span>Reviews</span><span>Trust</span><span>Visibility</span></div>
+  </div>
+  <div class="accent"><div class="word">REPUTATION</div></div>
+</section>
+
+<section class="product">
+  <div class="number">03</div>
+  <div>
+    <h2>Revenue<br>Recovery</h2>
+    <p>Don't leave revenue behind. Reconnect with customers who have not returned and use targeted customer communication to create new opportunities for your business.</p>
+    <div class="micro"><span>Win Back</span><span>Re-engage</span><span>Repeat Business</span></div>
+  </div>
+  <div class="accent"><div class="word">RECOVER</div></div>
+</section>
+
+<section class="product">
+  <div class="number">04</div>
+  <div>
+    <h2>Business<br>Funding</h2>
+    <p>Access business credit solutions designed to help qualified businesses pursue growth opportunities, manage expenses and invest in their future.</p>
+    <div class="micro"><span>Qualified Businesses</span><span>Growth</span><span>Capital</span></div>
+  </div>
+  <div class="accent"><div class="word">CAPITAL</div></div>
+</section>
+
+<section class="product">
+  <div class="number">05</div>
+  <div>
+    <h2>Payment<br>Solutions</h2>
+    <p>Flexible payment technology built around the way your business operates — from terminals and POS systems to online and mobile payment options, with local support and scalable technology.</p>
+    <div class="micro"><span>POS</span><span>Online</span><span>Mobile</span><span>Local Support</span></div>
+  </div>
+  <div class="accent"><div class="word">PAYMENTS</div></div>
+</section>
+
+<section class="closer">
+  <div class="eyebrow">ONE PLATFORM • MORE WAYS TO GROW</div>
+  <h2>LET'S TALK ABOUT<br>YOUR BUSINESS.</h2>
+  <p>You don't need another sales pitch. Let's look at what you're paying, where customers are being lost and where the right combination of solutions can make the business stronger.</p>
+  <a class="button" href="contact.html">Let's Talk</a>
+</section>
+
+<footer class="footer">
+  <span>WPI Growth Plans</span>
+  <span>Reputation Management • Revenue Recovery • Business Capital • Payment Solutions</span>
+</footer>
+
+</div>
+</body>
+</html>
