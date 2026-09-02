@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WPI Growth Plans — More Ways to Grow</title>
+<meta name="description" content="WPI Growth Plans — one platform, more ways to grow. Customer Connect, Reputation Management, Revenue Recovery, Business Funding and Payment Solutions.">
+<style>
+:root{
+  --bg:#05080a;
+  --bg2:#091015;
+  --text:#f4f7f8;
+  --muted:#9ba8ad;
+  --line:rgba(255,255,255,.12);
+  --green:#00a651;
+  --blue:#087bc9;
+  --max:1440px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.page{max-width:var(--max);margin:auto}
+.nav{
+  height:78px;padding:0 5.5vw;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;
+  background:rgba(5,8,10,.86);backdrop-filter:blur(18px)
+}
+.logo{font-weight:900;letter-spacing:.13em;font-size:14px;white-space:nowrap}
+.logo b{color:var(--green)}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.navlinks a{opacity:.72;transition:.25s}
+.navlinks a:hover,.navlinks .active{opacity:1;color:#fff}
+.lets{padding:12px 17px;border:1px solid rgba(0,166,81,.65);border-radius:999px;color:#fff!important}
+
+.hero{
+  min-height:88vh;padding:10vh 6vw 8vh;display:grid;grid-template-columns:1.12fr .88fr;
+  align-items:end;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 28%,rgba(8,123,201,.22),transparent 28%),
+    radial-gradient(circle at 68% 68%,rgba(0,166,81,.17),transparent 30%),
+    linear-gradient(180deg,#05080a 0%,#071015 100%);
+}
+.hero:before{
+  content:"";position:absolute;inset:0;opacity:.3;pointer-events:none;
+  background:
+    linear-gradient(115deg,transparent 0 57%,rgba(255,255,255,.05) 57.1%,transparent 57.3%),
+    linear-gradient(155deg,transparent 0 66%,rgba(0,166,81,.08) 66.1%,transparent 66.3%);
+}
+.kicker{font-size:11px;letter-spacing:.25em;font-weight:800;color:#aab6ba;margin-bottom:26px}
+.hero h1{font-size:clamp(68px,10vw,154px);line-height:.82;letter-spacing:-.065em;margin:0;max-width:900px;font-weight:950}
+.hero h1 .green{color:var(--green)}
+.hero h1 .blue{color:var(--blue)}
+.hero-right{position:relative;z-index:1;padding:0 0 18px 5vw;max-width:610px}
+.hero-right p{font-size:clamp(19px,2vw,28px);line-height:1.3;margin:0 0 36px;color:#dce3e5;max-width:590px}
+.hero-rule{height:1px;background:linear-gradient(90deg,var(--green),var(--blue),transparent);margin-bottom:22px}
+.hero-note{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:#8d9a9f;font-weight:800}
+.orbit{
+  position:absolute;right:-10vw;top:9vh;width:min(52vw,720px);aspect-ratio:1;border-radius:50%;
+  border:1px solid rgba(255,255,255,.1);transform:rotate(-14deg)
+}
+.orbit:before,.orbit:after{content:"";position:absolute;border-radius:50%;inset:11%;border:1px solid rgba(8,123,201,.24)}
+.orbit:after{inset:25%;border-color:rgba(0,166,81,.3)}
+.dot{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--green);box-shadow:0 0 32px var(--green);right:27%;top:17%}
+
+.intro{
+  padding:12vh 6vw 10vh;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:1fr 1fr;gap:8vw
+}
+.intro h2,.closer h2{font-size:clamp(44px,6vw,92px);line-height:.9;letter-spacing:-.055em;margin:0;font-weight:900}
+.intro p{font-size:22px;line-height:1.5;color:#aeb9bd;max-width:620px;margin:8px 0 0}
+
+.product{
+  min-height:72vh;padding:8vh 6vw;display:grid;grid-template-columns:90px 1fr .9fr;gap:4vw;
+  align-items:center;border-top:1px solid var(--line);position:relative;overflow:hidden;
+}
+.product:nth-of-type(odd){background:linear-gradient(90deg,rgba(255,255,255,.018),transparent 60%)}
+.num{font-size:15px;color:var(--green);font-weight:900;letter-spacing:.12em;align-self:start;padding-top:13px}
+.product h2{font-size:clamp(52px,6.2vw,98px);line-height:.88;letter-spacing:-.06em;margin:0 0 30px;font-weight:950}
+.product p{font-size:18px;line-height:1.55;color:#aeb9bd;max-width:650px;margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.tags span{
+  border:1px solid rgba(255,255,255,.13);padding:8px 11px;border-radius:999px;
+  font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#bdc7ca
+}
+.visual{min-height:360px;position:relative;display:grid;place-items:center}
+.visual .ring{width:min(29vw,400px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.14);position:absolute}
+.visual .ring.r2{width:70%;border-color:rgba(0,166,81,.35)}
+.visual .ring.r3{width:45%;border-color:rgba(8,123,201,.45)}
+.visual .core{
+  width:110px;height:110px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff, var(--green) 18%,#064d2d 55%,#03130c 72%);
+  box-shadow:0 0 80px rgba(0,166,81,.28);position:relative
+}
+.visual .core:after{content:"";position:absolute;inset:-18px;border-radius:50%;border:1px solid rgba(0,166,81,.35)}
+.wordmark{
+  position:absolute;font-size:clamp(45px,6vw,90px);font-weight:950;letter-spacing:-.06em;
+  color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.12);transform:rotate(-12deg);
+  user-select:none
+}
+.visual .bar{position:absolute;width:58%;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);transform:rotate(-22deg)}
+.visual .bar2{transform:rotate(26deg);background:linear-gradient(90deg,transparent,var(--green),transparent)}
+
+.product:nth-of-type(4) .core{background:radial-gradient(circle at 35% 30%,#fff,var(--blue) 18%,#063e68 55%,#020b12 72%)}
+.product:nth-of-type(5) .core{background:radial-gradient(circle at 35% 30%,#fff,#8b6b24 15%,#243126 48%,#020605 72%)}
+.product:nth-of-type(6) .core{background:radial-gradient(circle at 35% 30%,#fff,var(--blue) 18%,#053657 52%,#02080d 72%)}
+
+.system{
+  padding:12vh 6vw;border-top:1px solid var(--line);
+  background:
+    radial-gradient(circle at 50% 50%,rgba(0,166,81,.12),transparent 32%),
+    #071015;
+}
+.system-top{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:65px}
+.system h2{font-size:clamp(48px,7vw,100px);line-height:.88;letter-spacing:-.06em;margin:0;font-weight:950}
+.system-top p{max-width:410px;color:#9eaaae;line-height:1.5;margin:0}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.flow:before{content:"";position:absolute;left:4%;right:4%;top:29px;height:1px;background:linear-gradient(90deg,var(--green),var(--blue))}
+.flow-item{position:relative;padding-right:25px}
+.flow-no{width:58px;height:58px;border:1px solid rgba(255,255,255,.22);border-radius:50%;display:grid;place-items:center;background:#071015;position:relative;z-index:2;font-weight:900}
+.flow-item h3{font-size:19px;margin:25px 0 10px}
+.flow-item p{color:#8f9b9f;line-height:1.45;font-size:14px;max-width:210px}
+
+.closer{
+  padding:15vh 6vw 12vh;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:1fr auto;gap:50px;align-items:end
+}
+.closer p{color:#9ca8ac;max-width:520px;font-size:18px;line-height:1.5;margin:25px 0 0}
+.cta{
+  display:inline-flex;align-items:center;gap:15px;padding:18px 24px;border-radius:999px;
+  background:linear-gradient(100deg,var(--green),var(--blue));font-weight:950;letter-spacing:.08em;
+  font-size:12px;white-space:nowrap;box-shadow:0 12px 50px rgba(0,166,81,.16)
+}
+.arrow{font-size:20px;line-height:0}
+.footer{
+  border-top:1px solid var(--line);padding:32px 6vw 45px;display:flex;justify-content:space-between;
+  gap:30px;color:#748084;font-size:11px;letter-spacing:.1em;text-transform:uppercase
+}
+.footer strong{color:#d9e0e2}
+@media(max-width:900px){
+ .navlinks{gap:12px}.navlinks a:not(.lets){display:none}
+ .hero{grid-template-columns:1fr;min-height:auto;padding-top:12vh;padding-bottom:12vh}
+ .hero-right{padding:70px 0 0}
+ .orbit{width:80vw;top:10vh;right:-35vw;opacity:.6}
+ .intro{grid-template-columns:1fr;gap:35px}
+ .product{grid-template-columns:45px 1fr;min-height:auto;padding-top:11vh;padding-bottom:11vh}
+ .visual{grid-column:2;min-height:300px;margin-top:25px}
+ .flow{grid-template-columns:1fr;gap:32px}.flow:before{left:28px;top:28px;bottom:28px;width:1px;height:auto;right:auto;background:linear-gradient(180deg,var(--green),var(--blue))}
+ .flow-item{padding-left:82px}.flow-no{position:absolute;left:0}
+ .system-top,.closer{grid-template-columns:1fr;display:grid}
+ .closer .cta{justify-self:start}
+ .footer{flex-direction:column}
+}
+@media(max-width:560px){
+ .nav{padding:0 20px}.logo{font-size:11px}.lets{padding:9px 12px}
+ .hero,.intro,.product,.system,.closer{padding-left:22px;padding-right:22px}
+ .hero h1{font-size:65px}
+ .product{grid-template-columns:35px 1fr;gap:18px}.product h2{font-size:50px}
+ .visual{grid-column:2;min-height:240px}.visual .ring{width:220px}
+ .footer{padding-left:22px;padding-right:22px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="nav">
+  <a class="logo" href="index.html"><b>WPI</b> GROWTH PLANS</a>
+  <nav class="navlinks">
+    <a href="bryan.html">Bryan</a>
+    <a class="active" href="solutions.html">Products</a>
+    <a href="how-it-works.html">Resources</a>
+    <a href="contact.html">Connect</a>
+    <a class="lets" href="contact.html">Let's Talk</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="orbit"><span class="dot"></span></div>
+  <div>
+    <div class="kicker">WPI GROWTH PLANS • ONE PLATFORM • MORE WAYS TO GROW</div>
+    <h1>MORE<br>WAYS TO <span class="green">GROW</span><span class="blue">.</span></h1>
+  </div>
+  <div class="hero-right">
+    <p>Your business deserves more than a card terminal. WPI brings payment solutions and customer-growth tools together to help reduce expense, strengthen relationships, increase repeat business and create more opportunities to grow.</p>
+    <div class="hero-rule"></div>
+    <div class="hero-note">Built around the business — not the other way around.</div>
+  </div>
+</section>
+
+<section class="intro">
+  <h2>THE TRANSACTION<br>ISN'T THE END.</h2>
+  <p>It's the beginning of the next customer relationship. The WPI approach connects the pieces that too often operate separately — customer engagement, reputation, recovery, capital and payments — into a clearer path to growth.</p>
+</section>
+
+<section class="product">
+  <div class="num">01</div>
+  <div>
+    <h2>Customer<br><span class="green">Connect.</span></h2>
+    <p>Turn transactions into relationships. Build and organize your customer database, engage customers through automated text marketing, reconnect with customers who have not returned, encourage reviews and create additional sales opportunities through ongoing communication.</p>
+    <div class="tags"><span>Capture</span><span>Engage</span><span>Recover</span><span>Review</span><span>Revenue</span></div>
+  </div>
+  <div class="visual">
+    <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core"></div>
+    <div class="wordmark">CONNECT</div><div class="bar"></div><div class="bar2"></div>
+  </div>
+</section>
+
+<section class="product">
+  <div class="num">02</div>
+  <div>
+    <h2>Reputation<br><span class="blue">Management.</span></h2>
+    <p>Turn great customer experiences into great reviews. Automated review requests, feedback and reputation tools help you stay visible, respond quickly and make your best customer experiences work harder for the business.</p>
+    <div class="tags"><span>Feedback</span><span>Reviews</span><span>Trust</span><span>Visibility</span></div>
+  </div>
+  <div class="visual">
+    <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core"></div>
+    <div class="wordmark">TRUST</div><div class="bar"></div><div class="bar2"></div>
+  </div>
+</section>
+
+<section class="product">
+  <div class="num">03</div>
+  <div>
+    <h2>Revenue<br><span class="green">Recovery.</span></h2>
+    <p>Don't leave revenue behind. Reconnect with customers who have not returned and use targeted customer communication to create new opportunities for your business — without relying on another expensive acquisition cycle.</p>
+    <div class="tags"><span>Win Back</span><span>Re-engage</span><span>Repeat Business</span></div>
+  </div>
+  <div class="visual">
+    <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core"></div>
+    <div class="wordmark">RECOVER</div><div class="bar"></div><div class="bar2"></div>
+  </div>
+</section>
+
+<section class="product">
+  <div class="num">04</div>
+  <div>
+    <h2>Business<br><span class="blue">Funding.</span></h2>
+    <p>Access business credit solutions designed for qualified businesses pursuing growth opportunities, managing expenses or investing in the next stage of the business.</p>
+    <div class="tags"><span>Qualified Businesses</span><span>Growth</span><span>Capital</span></div>
+  </div>
+  <div class="visual">
+    <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core"></div>
+    <div class="wordmark">CAPITAL</div><div class="bar"></div><div class="bar2"></div>
+  </div>
+</section>
+
+<section class="product">
+  <div class="num">05</div>
+  <div>
+    <h2>Payment<br><span class="blue">Solutions.</span></h2>
+    <p>Flexible payment technology built around the way your business operates — from terminals and POS systems to online and mobile payment options, backed by local support and scalable technology.</p>
+    <div class="tags"><span>POS</span><span>Online</span><span>Mobile</span><span>Local Support</span></div>
+  </div>
+  <div class="visual">
+    <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core"></div>
+    <div class="wordmark">PAYMENTS</div><div class="bar"></div><div class="bar2"></div>
+  </div>
+</section>
+
+<section class="system">
+  <div class="system-top">
+    <h2>ONE SYSTEM.<br><span class="green">MORE LEVERAGE.</span></h2>
+    <p>Each piece solves a different business problem. Together, they create a stronger customer and revenue engine — with payment solutions as the foundation, not the whole story.</p>
+  </div>
+  <div class="flow">
+    <div class="flow-item"><div class="flow-no">01</div><h3>Capture</h3><p>Build a customer database you can actually use.</p></div>
+    <div class="flow-item"><div class="flow-no">02</div><h3>Engage</h3><p>Stay connected with customers between visits.</p></div>
+    <div class="flow-item"><div class="flow-no">03</div><h3>Recover</h3><p>Bring back customers and missed opportunities.</p></div>
+    <div class="flow-item"><div class="flow-no">04</div><h3>Grow</h3><p>Use reputation, loyalty and capital to move forward.</p></div>
+    <div class="flow-item"><div class="flow-no">05</div><h3>Optimize</h3><p>Build the payment solution around the business.</p></div>
+  </div>
+</section>
+
+<section class="closer">
+  <div>
+    <h2>LET'S TALK ABOUT<br>YOUR <span class="green">BUSINESS.</span></h2>
+    <p>You don't need another sales pitch. You need to know where the opportunity is — and what to do about it.</p>
+  </div>
+  <a class="cta" href="contact.html">LET'S TALK <span class="arrow">→</span></a>
+</section>
+
+<footer class="footer">
+  <div><strong>WPI GROWTH PLANS</strong> • One platform. More ways to grow.</div>
+  <div>Reputation Management • Revenue Recovery • Business Capital • Payment Solutions</div>
+</footer>
+
+</div>
+</body>
+</html>
