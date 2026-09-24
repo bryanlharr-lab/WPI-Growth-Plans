@@ -1,634 +1,599 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>L3 Growth Advisors | Local Business Growth</title>
-
-  <meta name="description"
-    content="L3 Growth Advisors helps local businesses strengthen customer relationships, improve reputation, recover revenue, access growth capital, and find practical ways to grow.">
-
-  <style>
-    :root {
-      --navy: #0b2341;
-      --blue: #1769aa;
-      --green: #21865b;
-      --light: #f5f7fa;
-      --gray: #5f6873;
-      --border: #dfe5eb;
-      --white: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #17212b;
-      background: #fff;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .wrap {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .header-inner {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      color: var(--navy);
-      font-weight: 900;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo {
-      font-size: 40px;
-      line-height: 1;
-      letter-spacing: -3px;
-      font-weight: 900;
-    }
-
-    .logo sup {
-      font-size: 16px;
-      vertical-align: top;
-      position: relative;
-      top: -2px;
-      margin-left: 2px;
-    }
-
-    .brand-text {
-      font-size: 15px;
-      line-height: 1.15;
-      letter-spacing: 1.4px;
-    }
-
-    .header-call {
-      background: var(--navy);
-      color: white;
-      padding: 12px 20px;
-      border-radius: 7px;
-      font-weight: 700;
-    }
-
-    .hero {
-      padding: 82px 0 72px;
-      background: linear-gradient(135deg, #ffffff 0%, #f4f7fa 100%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.3fr .7fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--blue);
-      font-weight: 800;
-      letter-spacing: 2px;
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      color: var(--navy);
-      font-size: clamp(42px, 6vw, 70px);
-      line-height: 1.02;
-      margin: 0 0 22px;
-      letter-spacing: -2px;
-    }
-
-    .hero p {
-      font-size: 21px;
-      color: var(--gray);
-      max-width: 720px;
-      margin: 0 0 30px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 54px;
-      padding: 14px 25px;
-      border-radius: 7px;
-      font-weight: 800;
-      font-size: 16px;
-    }
-
-    .btn-call {
-      background: var(--navy);
-      color: white;
-    }
-
-    .btn-text {
-      background: var(--green);
-      color: white;
-    }
-
-    .btn-email {
-      border: 2px solid var(--navy);
-      color: var(--navy);
-      background: white;
-    }
-
-    .hero-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 32px;
-      box-shadow: 0 18px 45px rgba(11,35,65,.08);
-    }
-
-    .hero-card h3 {
-      color: var(--navy);
-      font-size: 24px;
-      margin-top: 0;
-      margin-bottom: 18px;
-    }
-
-    .check {
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-      font-weight: 700;
-    }
-
-    .check:last-child {
-      border-bottom: 0;
-    }
-
-    .check span {
-      color: var(--green);
-      margin-right: 8px;
-    }
-
-    .section {
-      padding: 75px 0;
-    }
-
-    .section-light {
-      background: var(--light);
-    }
-
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 38px;
-    }
-
-    .section-heading h2 {
-      color: var(--navy);
-      font-size: clamp(32px, 4vw, 46px);
-      line-height: 1.1;
-      margin: 0 0 14px;
-    }
-
-    .section-heading p {
-      color: var(--gray);
-      font-size: 18px;
-      margin: 0;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .service {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 28px 24px;
-    }
-
-    .service-number {
-      color: var(--blue);
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    .service h3 {
-      color: var(--navy);
-      margin: 9px 0 10px;
-      font-size: 21px;
-    }
-
-    .service p {
-      color: var(--gray);
-      margin: 0;
-      font-size: 15px;
-    }
-
-    .approach {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .approach h2 {
-      color: var(--navy);
-      font-size: clamp(32px, 4vw, 48px);
-      line-height: 1.1;
-      margin-top: 0;
-    }
-
-    .approach p {
-      color: var(--gray);
-      font-size: 18px;
-    }
-
-    .steps {
-      border-left: 4px solid var(--blue);
-      padding-left: 28px;
-    }
-
-    .step {
-      margin: 0 0 25px;
-    }
-
-    .step:last-child {
-      margin-bottom: 0;
-    }
-
-    .step strong {
-      display: block;
-      color: var(--navy);
-      font-size: 19px;
-      margin-bottom: 4px;
-    }
-
-    .step span {
-      color: var(--gray);
-    }
-
-    .cta {
-      text-align: center;
-      padding: 80px 20px;
-      background: var(--navy);
-      color: white;
-    }
-
-    .cta h2 {
-      font-size: clamp(34px, 5vw, 52px);
-      line-height: 1.08;
-      margin: 0 0 15px;
-    }
-
-    .cta p {
-      font-size: 19px;
-      max-width: 680px;
-      margin: 0 auto 28px;
-      color: #d9e3ee;
-    }
-
-    .cta .btn-call {
-      background: white;
-      color: var(--navy);
-    }
-
-    .cta .btn-email {
-      border-color: white;
-      color: white;
-      background: transparent;
-    }
-
-    .cta .actions {
-      justify-content: center;
-    }
-
-    footer {
-      padding: 32px 0;
-      text-align: center;
-      background: white;
-      color: var(--gray);
-      font-size: 14px;
-    }
-
-    footer strong,
-    footer a {
-      color: var(--navy);
-    }
-
-    footer a {
-      font-weight: 700;
-    }
-
-    @media (max-width: 850px) {
-      .hero-grid,
-      .approach {
-        grid-template-columns: 1fr;
-      }
-
-      .services {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero {
-        padding-top: 55px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .header-inner {
-        min-height: 68px;
-      }
-
-      .brand-text {
-        font-size: 12px;
-      }
-
-      .logo {
-        font-size: 34px;
-      }
-
-      .header-call {
-        padding: 10px 14px;
-        font-size: 14px;
-      }
-
-      h1 {
-        font-size: 45px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      .actions {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-      }
-
-      .btn {
-        width: 100%;
-        min-height: 58px;
-      }
-
-      .section {
-        padding: 58px 0;
-      }
-
-      .cta {
-        padding: 65px 20px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>L3 Growth Advisors | Local Business Growth</title>
+
+<meta name="description" content="L3 Growth Advisors helps local businesses strengthen customer relationships, reputation, revenue and growth.">
+
+<style>
+:root{
+  --navy:#0b2341;
+  --blue:#1769aa;
+  --green:#21865b;
+  --light:#f5f7fa;
+  --gray:#5f6873;
+  --border:#dfe5eb;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#17212b;
+  background:#fff;
+  line-height:1.6;
+}
+
+a{text-decoration:none}
+
+.wrap{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.header-inner{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  color:var(--navy);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:900;
+}
+
+.logo{
+  font-size:42px;
+  line-height:1;
+  letter-spacing:-3px;
+}
+
+.logo sup{
+  font-size:16px;
+  vertical-align:top;
+  position:relative;
+  top:-3px;
+  margin-left:2px;
+}
+
+.brand-text{
+  font-size:15px;
+  line-height:1.1;
+  letter-spacing:1.4px;
+}
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.partner-small{
+  color:var(--gray);
+  font-size:12px;
+  text-align:right;
+  line-height:1.3;
+}
+
+.header-call{
+  background:var(--navy);
+  color:#fff;
+  padding:12px 20px;
+  border-radius:7px;
+  font-weight:800;
+}
+
+/* HERO */
+
+.hero{
+  padding:78px 0 70px;
+  background:linear-gradient(135deg,#fff 0%,#f3f7fa 100%);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:55px;
+  align-items:center;
+}
+
+.eyebrow{
+  color:var(--blue);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+
+h1{
+  color:var(--navy);
+  font-size:clamp(43px,6vw,70px);
+  line-height:1.02;
+  letter-spacing:-2px;
+  margin:0 0 22px;
+}
+
+.hero p{
+  color:var(--gray);
+  font-size:21px;
+  max-width:720px;
+  margin:0 0 30px;
+}
+
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-height:54px;
+  padding:14px 25px;
+  border-radius:7px;
+  font-size:16px;
+  font-weight:800;
+}
+
+.btn-call{
+  background:var(--navy);
+  color:#fff;
+}
+
+.btn-text{
+  background:var(--green);
+  color:#fff;
+}
+
+.btn-email{
+  background:#fff;
+  border:2px solid var(--navy);
+  color:var(--navy);
+}
+
+.hero-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:32px;
+  box-shadow:0 18px 45px rgba(11,35,65,.08);
+}
+
+.hero-card h3{
+  color:var(--navy);
+  font-size:24px;
+  margin:0 0 18px;
+}
+
+.check{
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+  font-weight:700;
+}
+
+.check:last-child{border-bottom:0}
+
+.check span{
+  color:var(--green);
+  margin-right:8px;
+}
+
+/* CUSTOMER CONNECT */
+
+.connect{
+  padding:65px 0;
+  background:var(--navy);
+  color:#fff;
+}
+
+.connect-grid{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:50px;
+  align-items:center;
+}
+
+.connect-brand{
+  text-align:center;
+}
+
+.connect-mark{
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.connect-mark .customer{
+  color:#fff;
+}
+
+.connect-mark .connect-word{
+  color:#7fd24a;
+}
+
+.powered{
+  margin-top:12px;
+  font-size:13px;
+  color:#c6d2df;
+}
+
+.wpi{
+  color:#61a6ef;
+  font-weight:800;
+}
+
+.connect h2{
+  font-size:clamp(31px,4vw,45px);
+  line-height:1.1;
+  margin:0 0 16px;
+}
+
+.connect p{
+  color:#d8e1eb;
+  font-size:18px;
+  margin:0;
+}
+
+/* SERVICES */
+
+.section{
+  padding:75px 0;
+}
+
+.section-light{
+  background:var(--light);
+}
+
+.section-heading{
+  max-width:760px;
+  margin-bottom:38px;
+}
+
+.section-heading h2{
+  color:var(--navy);
+  font-size:clamp(32px,4vw,46px);
+  line-height:1.1;
+  margin:0 0 14px;
+}
+
+.section-heading p{
+  color:var(--gray);
+  font-size:18px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.service{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:28px 24px;
+}
+
+.service-number{
+  color:var(--blue);
+  font-size:13px;
+  font-weight:900;
+}
+
+.service h3{
+  color:var(--navy);
+  margin:9px 0 10px;
+  font-size:21px;
+}
+
+.service p{
+  color:var(--gray);
+  margin:0;
+  font-size:15px;
+}
+
+/* APPROACH */
+
+.approach{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.approach h2{
+  color:var(--navy);
+  font-size:clamp(32px,4vw,48px);
+  line-height:1.1;
+  margin-top:0;
+}
+
+.approach p{
+  color:var(--gray);
+  font-size:18px;
+}
+
+.steps{
+  border-left:4px solid var(--blue);
+  padding-left:28px;
+}
+
+.step{
+  margin-bottom:25px;
+}
+
+.step:last-child{margin-bottom:0}
+
+.step strong{
+  display:block;
+  color:var(--navy);
+  font-size:19px;
+}
+
+.step span{color:var(--gray)}
+
+/* PARTNERS */
+
+.partners{
+  background:var(--light);
+  padding:55px 0;
+  text-align:center;
+}
+
+.partners h3{
+  color:var(--navy);
+  font-size:24px;
+  margin:0 0 12px;
+}
+
+.partners p{
+  max-width:760px;
+  margin:0 auto;
+  color:var(--gray);
+  font-size:16px;
+}
+
+.partner-names{
+  margin-top:24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.partner-box{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:9px;
+  padding:18px 28px;
+  min-width:220px;
+}
+
+.partner-box strong{
+  color:var(--navy);
+  font-size:18px;
+}
+
+.partner-box small{
+  display:block;
+  color:var(--gray);
+  margin-top:3px;
+}
+
+/* CTA */
+
+.cta{
+  background:var(--navy);
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
+}
+
+.cta h2{
+  font-size:clamp(34px,5vw,52px);
+  line-height:1.08;
+  margin:0 0 15px;
+}
+
+.cta p{
+  color:#d9e3ee;
+  font-size:19px;
+  max-width:680px;
+  margin:0 auto 28px;
+}
+
+.cta .actions{
+  justify-content:center;
+}
+
+.cta .btn-call{
+  background:#fff;
+  color:var(--navy);
+}
+
+.cta .btn-email{
+  border-color:#fff;
+  background:transparent;
+  color:#fff;
+}
+
+/* FOOTER */
+
+footer{
+  padding:34px 0;
+  text-align:center;
+  color:var(--gray);
+  font-size:14px;
+}
+
+footer strong,
+footer a{
+  color:var(--navy);
+}
+
+footer a{font-weight:700}
+
+.footer-partner{
+  margin-top:12px;
+  font-size:12px;
+  color:#7a838c;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .hero-grid,
+  .connect-grid,
+  .approach{
+    grid-template-columns:1fr;
+  }
+
+  .services{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .connect-brand{
+    text-align:left;
+  }
+
+  .partner-small{
+    display:none;
+  }
+}
+
+@media(max-width:600px){
+
+  .header-inner{
+    min-height:68px;
+  }
+
+  .logo{font-size:34px}
+
+  .brand-text{font-size:12px}
+
+  .header-call{
+    padding:10px 13px;
+    font-size:13px;
+  }
+
+  h1{font-size:44px}
+
+  .hero{
+    padding:55px 0;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  .actions{
+    display:grid;
+    grid-template-columns:1fr;
+    width:100%;
+  }
+
+  .btn{
+    width:100%;
+    min-height:58px;
+  }
+
+  .section{
+    padding:58px 0;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="wrap header-inner">
+<div class="wrap header-inner">
 
-    <a href="#top" class="brand">
-      <div class="logo">L<sup>3</sup></div>
-      <div class="brand-text">
-        GROWTH<br>ADVISORS
-      </div>
-    </a>
+  <a class="brand" href="#top">
+    <div class="logo">L<sup>3</sup></div>
+
+    <div class="brand-text">
+      GROWTH<br>ADVISORS
+    </div>
+  </a>
+
+  <div class="header-right">
+
+    <div class="partner-small">
+      Strategic solutions with<br>
+      Customer Connect &amp; WPI
+    </div>
 
     <a class="header-call" href="tel:+19185651333">
       CALL BRYAN
     </a>
 
   </div>
+</div>
 </header>
+
 
 <main id="top">
 
-  <section class="hero">
-    <div class="wrap hero-grid">
+<section class="hero">
 
-      <div>
-        <div class="eyebrow">L3 GROWTH ADVISORS</div>
+<div class="wrap hero-grid">
 
-        <h1>
-          Practical Growth.<br>
-          Built for Local Business.
-        </h1>
+  <div>
 
-        <p>
-          We help business owners find practical opportunities to
-          strengthen customer relationships, build their reputation,
-          recover revenue and create room for growth.
-        </p>
-
-        <div class="actions">
-          <a class="btn btn-call" href="tel:+19185651333">
-            CALL BRYAN
-          </a>
-
-          <a class="btn btn-text" href="sms:+19185651333">
-            TEXT BRYAN
-          </a>
-
-          <a class="btn btn-email"
-             href="mailto:bryan.harr@Level3ga.com">
-            EMAIL BRYAN
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <h3>Where can your business grow?</h3>
-
-        <div class="check">
-          <span>✓</span> Customer Retention &amp; Engagement
-        </div>
-
-        <div class="check">
-          <span>✓</span> Reputation &amp; Reviews
-        </div>
-
-        <div class="check">
-          <span>✓</span> Revenue &amp; Profit Opportunities
-        </div>
-
-        <div class="check">
-          <span>✓</span> Business Growth Capital
-        </div>
-
-        <div class="check">
-          <span>✓</span> Payment &amp; Business Solutions
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section section-light" id="solutions">
-    <div class="wrap">
-
-      <div class="section-heading">
-        <div class="eyebrow">WHAT WE LOOK FOR</div>
-
-        <h2>
-          Find the opportunities hiding inside your business.
-        </h2>
-
-        <p>
-          L3 takes a practical look at the areas that can directly
-          affect customer activity, revenue and long-term growth.
-        </p>
-      </div>
-
-      <div class="services">
-
-        <article class="service">
-          <div class="service-number">01</div>
-          <h3>Customer Growth</h3>
-          <p>
-            Strengthen customer engagement, encourage repeat visits
-            and reconnect with customers who have stopped coming back.
-          </p>
-        </article>
-
-        <article class="service">
-          <div class="service-number">02</div>
-          <h3>Reputation</h3>
-          <p>
-            Improve how your business is represented online and
-            turn satisfied customers into stronger public reviews.
-          </p>
-        </article>
-
-        <article class="service">
-          <div class="service-number">03</div>
-          <h3>Revenue</h3>
-          <p>
-            Identify areas where unnecessary costs or missed
-            opportunities may be reducing your bottom line.
-          </p>
-        </article>
-
-        <article class="service">
-          <div class="service-number">04</div>
-          <h3>Growth Capital</h3>
-          <p>
-            Explore funding options when additional capital could
-            help support equipment, expansion, inventory or growth.
-          </p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap approach">
-
-      <div>
-        <div class="eyebrow">A DIFFERENT APPROACH</div>
-
-        <h2>
-          Start with the business.<br>
-          Not the product.
-        </h2>
-
-        <p>
-          Every local business is different. L3 starts by looking at
-          where your business is today, what may be getting left on
-          the table and which opportunities are actually worth
-          discussing.
-        </p>
-
-        <p>
-          No giant presentation. No unnecessary complexity.
-          Just a practical conversation about your business.
-        </p>
-      </div>
-
-      <div class="steps">
-
-        <div class="step">
-          <strong>1. Take a look.</strong>
-          <span>
-            Review the business, customer experience and visible
-            growth opportunities.
-          </span>
-        </div>
-
-        <div class="step">
-          <strong>2. Find the gaps.</strong>
-          <span>
-            Identify areas where customers, revenue or growth
-            opportunities may be slipping through.
-          </span>
-        </div>
-
-        <div class="step">
-          <strong>3. Focus on what matters.</strong>
-          <span>
-            Discuss solutions only where they make practical sense
-            for the business.
-          </span>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="cta" id="contact">
-
-    <div class="eyebrow" style="color:#8fc1e8;">
-      BRYAN HARR • STRATEGIC GROWTH PARTNER
+    <div class="eyebrow">
+      L3 GROWTH ADVISORS
     </div>
 
-    <h2>Let's talk about your business.</h2>
+    <h1>
+      Practical Growth.<br>
+      Built for Local Business.
+    </h1>
 
     <p>
-      A short conversation is enough to find out whether
-      there is an opportunity worth pursuing.
+      We help local business owners identify practical opportunities
+      to strengthen customer relationships, improve reputation,
+      recover revenue and create room for growth.
     </p>
 
     <div class="actions">
 
-      <a class="btn btn-call" href="tel:+19185651333">
-        CALL 918-565-1333
+      <a class="btn btn-call"
+         href="tel:+19185651333">
+        CALL BRYAN
       </a>
 
-      <a class="btn btn-text" href="sms:+19185651333">
+      <a class="btn btn-text"
+         href="sms:+19185651333">
         TEXT BRYAN
       </a>
 
@@ -638,32 +603,326 @@
       </a>
 
     </div>
-  </section>
+
+  </div>
+
+
+  <div class="hero-card">
+
+    <h3>Where can your business grow?</h3>
+
+    <div class="check">
+      <span>✓</span>
+      Customer Retention &amp; Engagement
+    </div>
+
+    <div class="check">
+      <span>✓</span>
+      Reputation &amp; Reviews
+    </div>
+
+    <div class="check">
+      <span>✓</span>
+      Revenue &amp; Profit Opportunities
+    </div>
+
+    <div class="check">
+      <span>✓</span>
+      Business Growth Capital
+    </div>
+
+    <div class="check">
+      <span>✓</span>
+      Payment &amp; Business Solutions
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<section class="connect">
+
+<div class="wrap connect-grid">
+
+  <div class="connect-brand">
+
+    <div class="connect-mark">
+      <span class="customer">CUSTOMER</span><br>
+      <span class="connect-word">CONNECT</span>
+    </div>
+
+    <div class="powered">
+      Customer engagement solutions<br>
+      powered through <span class="wpi">WPI</span>
+    </div>
+
+  </div>
+
+
+  <div>
+
+    <div class="eyebrow" style="color:#8fc1e8">
+      CUSTOMER ENGAGEMENT
+    </div>
+
+    <h2>
+      Turn more customers into repeat customers.
+    </h2>
+
+    <p>
+      Customer Connect gives local businesses practical tools
+      for customer communication, loyalty and repeat visits —
+      helping you stay connected after the initial sale.
+    </p>
+
+  </div>
+
+</div>
+</section>
+
+
+<section class="section section-light">
+
+<div class="wrap">
+
+  <div class="section-heading">
+
+    <div class="eyebrow">
+      GROWTH OPPORTUNITIES
+    </div>
+
+    <h2>
+      Find what may be getting left on the table.
+    </h2>
+
+    <p>
+      L3 looks across the business to identify opportunities
+      that can affect customer activity, revenue and long-term growth.
+    </p>
+
+  </div>
+
+
+  <div class="services">
+
+    <article class="service">
+      <div class="service-number">01</div>
+      <h3>Customer Growth</h3>
+      <p>
+        Encourage repeat visits, strengthen customer engagement
+        and reconnect with customers.
+      </p>
+    </article>
+
+
+    <article class="service">
+      <div class="service-number">02</div>
+      <h3>Reputation</h3>
+      <p>
+        Strengthen your online reputation and help satisfied
+        customers become visible advocates for your business.
+      </p>
+    </article>
+
+
+    <article class="service">
+      <div class="service-number">03</div>
+      <h3>Revenue</h3>
+      <p>
+        Look for unnecessary costs, missed opportunities and
+        practical ways to improve profitability.
+      </p>
+    </article>
+
+
+    <article class="service">
+      <div class="service-number">04</div>
+      <h3>Growth Capital</h3>
+      <p>
+        Explore business-capital options for equipment,
+        inventory, expansion and other growth opportunities.
+      </p>
+    </article>
+
+  </div>
+
+</div>
+</section>
+
+
+<section class="section">
+
+<div class="wrap approach">
+
+  <div>
+
+    <div class="eyebrow">
+      THE L3 APPROACH
+    </div>
+
+    <h2>
+      Start with the business.<br>
+      Not the product.
+    </h2>
+
+    <p>
+      Every local business is different. L3 starts by looking at
+      where your business is today and which opportunities are
+      actually worth discussing.
+    </p>
+
+    <p>
+      No giant presentation. No unnecessary complexity.
+      Just a practical conversation about your business.
+    </p>
+
+  </div>
+
+
+  <div class="steps">
+
+    <div class="step">
+      <strong>1. Take a look.</strong>
+      <span>
+        Understand the business, customer experience and current position.
+      </span>
+    </div>
+
+    <div class="step">
+      <strong>2. Find the gaps.</strong>
+      <span>
+        Identify where customers, revenue or opportunities may be slipping through.
+      </span>
+    </div>
+
+    <div class="step">
+      <strong>3. Match the right solution.</strong>
+      <span>
+        Use L3, Customer Connect and WPI resources where they make practical sense.
+      </span>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<section class="partners">
+
+<div class="wrap">
+
+  <h3>
+    L3 Growth Advisors brings the pieces together.
+  </h3>
+
+  <p>
+    L3 serves as your local growth advisor while working with
+    established solution providers to help address specific
+    opportunities inside your business.
+  </p>
+
+
+  <div class="partner-names">
+
+    <div class="partner-box">
+      <strong>Customer Connect</strong>
+      <small>
+        Customer engagement &amp; retention
+      </small>
+    </div>
+
+    <div class="partner-box">
+      <strong>WPI</strong>
+      <small>
+        Business &amp; payment solutions
+      </small>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<section class="cta">
+
+<div class="eyebrow" style="color:#8fc1e8">
+  BRYAN HARR • STRATEGIC GROWTH PARTNER
+</div>
+
+<h2>
+  Let's talk about your business.
+</h2>
+
+<p>
+  A short conversation is enough to determine whether
+  there is an opportunity worth pursuing.
+</p>
+
+
+<div class="actions">
+
+  <a class="btn btn-call"
+     href="tel:+19185651333">
+    CALL 918-565-1333
+  </a>
+
+  <a class="btn btn-text"
+     href="sms:+19185651333">
+    TEXT BRYAN
+  </a>
+
+  <a class="btn btn-email"
+     href="mailto:bryan.harr@Level3ga.com">
+    EMAIL BRYAN
+  </a>
+
+</div>
+
+</section>
 
 </main>
 
+
 <footer>
-  <div class="wrap">
 
-    <strong>L3 GROWTH ADVISORS</strong><br>
+<div class="wrap">
 
-    Bryan Harr • Strategic Growth Partner<br>
+  <strong>
+    L3 GROWTH ADVISORS
+  </strong>
 
-    <a href="tel:+19185651333">
-      918-565-1333
-    </a>
+  <br>
 
-    &nbsp; • &nbsp;
+  Bryan Harr • Strategic Growth Partner
 
-    <a href="mailto:bryan.harr@Level3ga.com">
-      bryan.harr@Level3ga.com
-    </a>
+  <br>
 
-    <br><br>
+  <a href="tel:+19185651333">
+    918-565-1333
+  </a>
 
-    © 2026 L3 Growth Advisors
+  &nbsp; • &nbsp;
 
+  <a href="mailto:bryan.harr@Level3ga.com">
+    bryan.harr@Level3ga.com
+  </a>
+
+
+  <div class="footer-partner">
+    Featuring Customer Connect customer-engagement solutions
+    and WPI business solutions.
   </div>
+
+  <br>
+
+  © 2026 L3 Growth Advisors
+
+</div>
+
 </footer>
 
 </body>
